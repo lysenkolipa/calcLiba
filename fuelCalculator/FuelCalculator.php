@@ -1,21 +1,27 @@
 <?php
-/**
- *
- */
+
+namespace fuelCalculator;
 
 class FuelCalculator
+{
+    private float $tripDistance;
+    private float $fuelEfficiency;
+    private float $fuelPrice;
+    private string $currency;
+
+    private const KM = 100;
 
     /**
-     * @param integer $tripDistance
-     * @param integer $fuelEfficiency
-     * @param integer $fuelPrice
+     * @param float $tripDistance
+     * @param float $fuelEfficiency
+     * @param float $fuelPrice
      */
-{
-    public function __construct(int $tripDistance, int $fuelEfficiency, int $fuelPrice)
+    public function __construct(float $tripDistance, float $fuelEfficiency, float $fuelPrice, ?string $currency = null)
     {
-        $this->$tripDistance = $tripDistance;
-        $this->$fuelEfficiency = $fuelEfficiency;
-        $this->$fuelPrice = $fuelPrice;
+        $this->tripDistance = $tripDistance;
+        $this->fuelEfficiency = $fuelEfficiency;
+        $this->fuelPrice = $fuelPrice;
+        $this->currency = $currency ?? 'UAH';
     }
 
     /**
@@ -23,13 +29,15 @@ class FuelCalculator
      * @param $tripDistance
      * @param $fuelEfficiency
      * @param $fuelPrice
-     * @return int
+     * @return float
      */
-    public function getFuelCostCalculationPerTrip($tripDistance, $fuelEfficiency, $fuelPrice):int
+    public function getFuelCostPerTrip(): float
     {
-        /**
-         * @return integer
-         */
-        return $tripDistance * ($fuelEfficiency /  100)* $fuelPrice;
+        return $this->tripDistance * ($this->fuelEfficiency / self::KM) * $this->fuelPrice;
+    }
+
+    public function displayFuelCostPerTrip(): void
+    {
+        echo "For current trip you need: " . $this->getFuelCostPerTrip() . " " . $this->currency;
     }
 }
