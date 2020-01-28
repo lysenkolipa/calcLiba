@@ -1,5 +1,5 @@
 {
-    "name": "lysenkolipa/calcLiba",
+    "name": "lysenkolipa/calc-liba",
     "description": "calculator",
     "type": "library",
     "license": "MIT",
@@ -12,7 +12,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "lysenkolipa\\calcLiba\\": ""
+            "lysenkolipa\\calc-liba\\": ""
         }
     }
 }
