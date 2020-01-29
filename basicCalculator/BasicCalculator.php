@@ -22,26 +22,37 @@ class BasicCalculator
         return $this->operand1 + $this->operand2;
     }
 
+    /**
+     * Method get devision from 2 operands
+     * @return float|null
+     */
     public function getDevision(): ?float
     {
-        if ($this->operand1 == 0) {
-            return null;
-        } else {
-            return $this->operand1 / $this->operand2;
-        }
-
+        return ($this->operand1 !== 0) ? ($this->operand1 / $this->operand2) : null;
     }
 
+    /**
+     * Method get multiplication from 2 operands
+     * @return float
+     */
     public function getMultiplication(): float
     {
         return $this->operand1 * $this->operand2;
     }
 
+    /**
+     * Method get substraction from 2 operands
+     * @return float
+     */
     public function getSubtraction(): float
     {
         return $this->operand1 - $this->operand2;
     }
 
+    /**
+     * Method displayed result of math functions
+     * @return void
+     */
     public function  displayResult():void
     {
         echo $this->operand1 . ' + ' . $this->operand2 . ' = ' . $this->getSumm() . '<br>';

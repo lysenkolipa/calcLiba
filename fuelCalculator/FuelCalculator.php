@@ -4,12 +4,12 @@ namespace lysenkolipa\calcliba\fuelCalculator;
 
 class FuelCalculator
 {
+    private const KM = 100;
+
     private $tripDistance;
     private $fuelEfficiency;
     private $fuelPrice;
     private $currency;
-
-    private const KM = 100;
 
     /**
      * @param float $tripDistance
@@ -36,6 +36,10 @@ class FuelCalculator
         return $this->tripDistance * ($this->fuelEfficiency / self::KM) * $this->fuelPrice;
     }
 
+    /**
+     * Method display fuel cost per trip according to the incoming parameters
+     * @return void
+     */
     public function displayFuelCostPerTrip(): void
     {
         echo "For current trip you need: " . $this->getFuelCostPerTrip() . " " . $this->currency;
