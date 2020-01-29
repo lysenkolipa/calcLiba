@@ -2,13 +2,10 @@
 
 declare(strict_types=1);
 
-
-use basicCalculator\BasicCalculator;
-use fuelCalculator\FuelCalculator;
-
-require_once __DIR__ . '/basicCalculator/BasicCalculator.php';
-require_once __DIR__ . '/fuelCalculator/FuelCalculator.php';
 require_once __DIR__ . '/vendor/autoload.php';
+
+use lysenkolipa\calcliba\basicCalculator\BasicCalculator;
+use lysenkolipa\calcliba\fuelCalculator\FuelCalculator;
 
 $calcBase = new BasicCalculator(5.3,566.5);
 $calcBase->getDevision();

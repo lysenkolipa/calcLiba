@@ -1,13 +1,13 @@
 <?php
 
-namespace fuelCalculator;
+namespace lysenkolipa\calcliba\fuelCalculator;
 
 class FuelCalculator
 {
-    private float $tripDistance;
-    private float $fuelEfficiency;
-    private float $fuelPrice;
-    private string $currency;
+    private $tripDistance;
+    private $fuelEfficiency;
+    private $fuelPrice;
+    private $currency;
 
     private const KM = 100;
 

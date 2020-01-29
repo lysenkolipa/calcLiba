@@ -1,11 +1,11 @@
 <?php
 
-namespace basicCalculator;
+namespace lysenkolipa\calcliba\basicCalculator;
 
 class BasicCalculator
 {
-    private float $operand1;
-    private float $operand2;
+    private $operand1;
+    private $operand2;
 
     /**
      * @param float $operand1
