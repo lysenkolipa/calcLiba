@@ -2,13 +2,12 @@
 
 declare(strict_types=1);
 
+use lysenkolipa\calcLiba\basicCalculator\BasicCalculator;
+use lysenkolipa\calcLiba\FuelCalculator\FuelCalculator;
+
 require_once __DIR__ . '/vendor/autoload.php';
 
-use lysenkolipa\calcliba\basicCalculator\BasicCalculator;
-use lysenkolipa\calcliba\fuelCalculator\FuelCalculator;
-
-$calcBase = new BasicCalculator(5.3,0.0);
-$calcBase->getDevision();
+$calcBase = new BasicCalculator(5.3,4.0);
 $calcBase->getMultiplication();
 $calcBase->getSubtraction();
 $calcBase->getSumm();

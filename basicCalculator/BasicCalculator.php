@@ -1,6 +1,6 @@
 <?php
 
-namespace lysenkolipa\calcliba\basicCalculator;
+namespace lysenkolipa\calcLiba\basicCalculator;
 
 class BasicCalculator
 {
@@ -23,12 +23,12 @@ class BasicCalculator
     }
 
     /**
-     * Method get devision from 2 operands
-     * @return float|null
+     * Method get division from 2 operands
+     * @return float
      */
-    public function getDevision(): ?float
+    public function getDivision(): float
     {
-        return ($this->operand1 !== 0) ? ($this->operand1 / $this->operand2) : null;
+        return  $this->operand1 / $this->operand2;
     }
 
     /**
@@ -57,7 +57,6 @@ class BasicCalculator
     {
         echo $this->operand1 . ' + ' . $this->operand2 . ' = ' . $this->getSumm() . '<br>';
         echo $this->operand1 . ' - ' . $this->operand2 . ' = ' . $this->getSubtraction() . '<br>';
-        echo $this->operand1 . ' / ' . $this->operand2 . ' = ' . $this->getDevision() . '<br>';
         echo $this->operand1 . ' * ' . $this->operand2 . ' = ' . $this->getMultiplication() . '<br>';
     }
 }
