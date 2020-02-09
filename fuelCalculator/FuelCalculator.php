@@ -1,6 +1,6 @@
 <?php
 
-namespace lysenkolipa\calcLiba\FuelCalculator;
+namespace lysenkolipa\calcLiba\fuelCalculator;
 
 class FuelCalculator
 {

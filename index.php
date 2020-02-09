@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use lysenkolipa\calcLiba\basicCalculator\BasicCalculator;
-use lysenkolipa\calcLiba\FuelCalculator\FuelCalculator;
+use lysenkolipa\calcLiba\fuelCalculator\FuelCalculator;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
